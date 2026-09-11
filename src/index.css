@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+
+/* MAIN */
+
+main {
+  width: 100%;
+  max-width: 600px;
+
+  min-height: 100vh;
+
+  margin: 0 auto;
+  padding: 2rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+/* TITEL */
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
+/* FILTER KNOPPEN */
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+
+  background-color: #ddd;
+  cursor: pointer;
+
+  font-size: 1rem;
+}
+
+.buttons button:hover {
+  background-color: #ccc;
+}
+
+
+/* TODO LIST */
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+
+/* ALL TODOS */
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  padding: 1rem;
+
+  background-color: white;
+  border-radius: 8px;
+}
+
+
+/* CHECKBOX  */
+
+li input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+
+  cursor: pointer;
+}
+
+
+/* TODO TEKST */
+
+li span {
+  flex: 1;
+}
+
+
+/* DELETE BUTTON */
+
+li button {
+  border: none;
+  background: none;
+
+  font-size: 1.25rem;
+
+  cursor: pointer;
+}
+
+li button:hover {
+  color: red;
+}
+
+
+/* NEW TODO INPUT */
+
+main > input {
+  width: 100%;
+
+  padding: 0.75rem 1rem;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  font-size: 1rem;
+}
+
+main > input:focus {
+  outline: 2px solid #999;
+}
+
+
+/* ADD BUTTON */
+
+main > button {
+  width: 100%;
+
+  padding: 0.75rem;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #222;
+  color: white;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+}
+
+main > button:hover {
+  background-color: #444;
+}
+
+/* VIEW TRANSITIONS */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* Standaard crossfade uitzetten voor ALLE elementen */
+::view-transition-old(*),
+::view-transition-new(*) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* Alleen animeren als een item ECHT nieuw binnenkomt */
+::view-transition-new(*):only-child {
+  animation: slide-fade-in 0.25s ease-out;
+}
+
+/* Alleen animeren als een item ECHT verdwijnt */
+::view-transition-old(*):only-child {
+  animation: slide-fade-out 0.2s ease-in;
+}
+
+@keyframes slide-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-fade-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+}
