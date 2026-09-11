@@ -1,6 +1,11 @@
 import "./QuestCard.css";
+import type { Quest } from "../../types/Quest";
 
-function QuestCard({ quest }) {
+type QuestCardProps = {
+  quest: Quest;
+};
+
+function QuestCard({ quest }: QuestCardProps) {
   return (
     <article className="quest-card">
       <button className="quest-checkbox">
@@ -16,9 +21,7 @@ function QuestCard({ quest }) {
         <h3>{quest.title}</h3>
       </div>
 
-      {quest.time && (
-        <time>◷ {quest.time}</time>
-      )}
+      {quest.time && <time>◷ {quest.time}</time>}
     </article>
   );
 }

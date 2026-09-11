@@ -1,0 +1,32 @@
+.progress-card {
+    display: flex;
+    flex-direction: row;
+    padding: var(--spacing-md);
+    gap: var(--spacing-sm);
+    background-color: var(--pale-green);
+    border: var(--border-std);
+    border-radius: var(--radius-md);
+
+    .progress-circle-container {
+        min-width: 10%;
+        aspect-ratio: 1 / 1;
+        border-radius: var(--radius-std);
+        background-color: var(--green);
+    }
+
+    .progress-text {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+
+        h2 {
+            flex-wrap: wrap;
+        }
+
+        p {
+            color: var(--grey);
+            flex-wrap: wrap;
+        }
+    }
+
+}

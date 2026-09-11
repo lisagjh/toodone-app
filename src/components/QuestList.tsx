@@ -1,15 +1,17 @@
 import QuestCard from "./QuestCard/QuestCard";
+import type { Quest } from "../types/Quest";
 
-function QuestList({ quests }) {
+type QuestListProps = {
+  quests: Quest[];
+};
+
+function QuestList({ quests }: QuestListProps) {
   return (
     <section>
       <h2>QUESTS ({quests.length})</h2>
 
       {quests.map((quest) => (
-        <QuestCard
-          key={quest.id}
-          quest={quest}
-        />
+        <QuestCard key={quest.id} quest={quest} />
       ))}
     </section>
   );
