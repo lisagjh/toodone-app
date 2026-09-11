@@ -62,22 +62,22 @@ export default function App() {
   }
 
   function toggleTodo(id: number) {
-    setTodos(prev => prev.map(todo =>
-      todo.id === id ? { ...todo, done: !todo.done } : todo
-    ));
+    withViewTransition(() => {
+      setTodos(prev => prev.map(todo =>
+        todo.id === id ? { ...todo, done: !todo.done } : todo
+      ));
+    });
+  }
+  
+  function changeFilter(newFilter: Filter) {
+    withViewTransition(() => {
+      setFilter(newFilter);
+    });
   }
   
   function deleteTodo(id: number) {
     withViewTransition(() => {
       setTodos(prev => prev.filter(todo => todo.id !== id));
-    });
-  }
-
-  // Filter switchen animeren we ook, zodat de lijst
-  // netjes in/uit fadet i.p.v. abrupt te verspringen
-  function changeFilter(newFilter: Filter) {
-    withViewTransition(() => {
-      setFilter(newFilter);
     });
   }
 
@@ -95,7 +95,7 @@ useEffect(() => {
       </div>
 
       <ul>
-      {filteredTodos.map(todo => (
+  {filteredTodos.map(todo => (
         <li
   key={todo.id}
   style={{ viewTransitionName: `todo-${todo.id}` }}
