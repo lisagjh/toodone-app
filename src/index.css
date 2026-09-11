@@ -19,6 +19,10 @@ html {
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
 
+  --border-std: 2px solid var(--black);
+  --shadow-std: 3px 3px 0px rgba(0, 0, 0, 1);
+  --radius-std: 100px;
+
 }
 
 * {
@@ -37,6 +41,10 @@ body {
   font-family: "unbounded", sans-serif;
 }
 
+h1 {
+  font-size: 1.4rem;
+}
+
 /* MAIN */
 main {
   display: flex;
@@ -47,3 +55,59 @@ main {
   width: 100%;  
 }
 
+/* components */
+/* HEADER */
+header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+
+  & .header-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .meta-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .streak-badge {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--pale-yellow);
+    border: var(--border-std);
+    border-radius: var(--radius-std);
+    box-shadow: var(--shadow-std);
+  }
+
+  .avatar {
+    background-color: var(--pure-white);
+    border: 1px solid var(--blue);
+    border-radius: var(--radius-std);
+  }
+
+  /* bottom row of header */
+  & .date-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .date-info {
+      color: var(--grey);
+    }
+
+    .task-info {
+      color: var(--orange);
+    }
+  }
+
+
+}

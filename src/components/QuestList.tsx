@@ -1,4 +1,4 @@
-import QuestCard from "./QuestCard";
+import QuestCard from "./QuestCard/QuestCard";
 
 function QuestList({ quests }) {
   return (

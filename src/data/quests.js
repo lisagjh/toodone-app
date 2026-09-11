@@ -2,7 +2,7 @@ export const quests = [
     {
       id: 1,
       title: "Review Figma constraint components",
-      category: "PRODUCT",
+      category: "WORK",
       priority: "CRITICAL",
       time: "10:30 AM",
       completed: false,
@@ -18,7 +18,7 @@ export const quests = [
     {
       id: 3,
       title: "Draft launch marketing announcement",
-      category: "GROWTH",
+      category: "WORK",
       priority: "FOCUS",
       time: "4:00 PM",
       completed: false,
@@ -39,4 +39,12 @@ export const quests = [
       time: null,
       completed: true,
     },
+    {
+      id: 6,
+      title: "Do 20 minute Yoga sessions",
+      category: "GROWTH",
+      priority: "CHILL",
+      time: null,
+      completed: false,
+    }
   ];

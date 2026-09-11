@@ -1,11 +1,12 @@
 import { quests } from "../data/quests";
 import QuestList from "../components/QuestList";
+import Header from "../components/Header";
+import ProfilePic from "../assets/profile.jpg";
 
 function Today() {
   return (
     <main>
-      <h1>TOODONE</h1>
-
+      <Header props={{ image: ProfilePic, imageAlt: "icon of person outline"}} />
       <QuestList quests={quests} />
     </main>
   );

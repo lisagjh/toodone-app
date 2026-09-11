@@ -1,0 +1,46 @@
+.quest-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  
+    padding: 20px;
+  
+    background: white;
+    border: 2px solid #18191d;
+    border-radius: 20px;
+  }
+  
+  .quest-checkbox {
+    width: 40px;
+    height: 40px;
+  
+    border: 2px solid #18191d;
+    border-radius: 10px;
+  
+    background: white;
+    cursor: pointer;
+  }
+  
+  .quest-content {
+    flex: 1;
+  }
+  
+  .quest-meta {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .priority,
+  .category {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  
+  .quest-card h3 {
+    margin: 6px 0 0;
+  }
+  
+  .quest-card time {
+    color: #737783;
+    white-space: nowrap;
+  }
