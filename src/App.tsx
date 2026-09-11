@@ -62,13 +62,9 @@ export default function App() {
   }
 
   function toggleTodo(id: number) {
-    withViewTransition(() => {
-      setTodos(prev => prev.map(todo =>
-        todo.id === id
-          ? { ...todo, done: !todo.done }
-          : todo
-      ));
-    });
+    setTodos(prev => prev.map(todo =>
+      todo.id === id ? { ...todo, done: !todo.done } : todo
+    ));
   }
   
   function deleteTodo(id: number) {

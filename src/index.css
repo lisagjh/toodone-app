@@ -162,15 +162,14 @@ main > button:hover {
 }
 
 /* VIEW TRANSITIONS */
-::view-transition-old(root),
-::view-transition-new(root) {
+::view-transition-old(*),
+::view-transition-new(*) {
   animation: none;
   mix-blend-mode: normal;
 }
 
-/* Standaard crossfade uitzetten voor ALLE elementen */
-::view-transition-old(*),
-::view-transition-new(*) {
+::view-transition-old(root),
+::view-transition-new(root) {
   animation: none;
   mix-blend-mode: normal;
 }
@@ -205,4 +204,4 @@ main > button:hover {
     opacity: 0;
     transform: translateX(-16px);
   }
-}
+} 
