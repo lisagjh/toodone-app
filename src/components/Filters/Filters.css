@@ -1,0 +1,21 @@
+.filters {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-sm);
+    width: 100%;
+
+    & button {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+    
+        & span {
+            padding: 2px 6px;
+            background-color: var(--white);
+            color: var(--black);
+            font-size: .8rem;
+            border-radius: var(--radius-md);
+        }
+    }
+}
+

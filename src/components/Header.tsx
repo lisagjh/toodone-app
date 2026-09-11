@@ -35,7 +35,7 @@ type HeaderProps = {
           </p>
   
           <p className="task-info">
-            3 tasks left
+            2 tasks left
             {/* TODO: make dynamic */}
           </p>
         </div>
