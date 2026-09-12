@@ -26,6 +26,9 @@ html {
   --radius-std: 100px;
   --radius-sm: 8px;
   --radius-md: 16px;
+
+  --font-body: "manrope", sans-serif;
+  --font-heading: "unbounded", sans-serif;
 }
 
 * {
@@ -51,6 +54,11 @@ h1 {
 h2 {
   font-size: 1.1rem;
 }
+
+h3 {
+  font-size: .95rem;
+}
+
 
 /* GENERAL */
 button {

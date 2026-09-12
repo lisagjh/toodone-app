@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { quests } from "../data/quests";
-import QuestList from "../components/QuestList";
+import QuestList from "../components/QuestList/QuestList";
 import Header from "../components/Header";
 import ProgressCard from "../components/ProgressCard/ProgressCard";
 import Filters from "../components/Filters/Filters";

@@ -5,7 +5,7 @@ type QuestCardProps = {
   quest: Quest;
 };
 
-function QuestCard({ quest }: QuestCardProps) {
+export default function QuestCard({ quest }: QuestCardProps) {
   return (
     <article className="quest-card">
       <button className="quest-checkbox">
@@ -25,5 +25,3 @@ function QuestCard({ quest }: QuestCardProps) {
     </article>
   );
 }
-
-export default QuestCard;
