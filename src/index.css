@@ -22,6 +22,7 @@ html {
 
   --border-std: 2px solid var(--black);
   --shadow-std: 3px 3px 0px rgba(0, 0, 0, 1);
+  --shadow-sm: 1px 1px 0px rgba(0, 0, 0, 1);
   --radius-std: 100px;
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -55,24 +56,25 @@ h2 {
 button {
   font-size: 0.9rem;
   font-weight: bold;
+  border: var(--border-std);
   border-radius: var(--border-std);
   background-color: var(--white);
+  color: var(--black);
   padding: var(--spacing-sm) var(--spacing-md);
 
-  border: var(--border-std);
   border-radius: var(--radius-std);
   transition: .2s ease-in-out;
-}
 
-button.active {
-  color: var(--white);
-  background-color: var(--orange);
-  box-shadow: var(--shadow-std);
-}
+  &:hover {
+    background-color: var(--light-grey);
+    box-shadow: var(--shadow-std);
+    translate: 0 -2px;
+  }
 
-button:hover {
-  cursor: pointer;
-  box-shadow: var(--shadow-std);
+  &:active {
+      box-shadow: var(--shadow-sm);
+      translate: 0 2px;
+  }
 }
 
 

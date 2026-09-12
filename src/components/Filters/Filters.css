@@ -3,19 +3,33 @@
     flex-direction: row;
     gap: var(--spacing-sm);
     width: 100%;
+  }
+  
+  .filter-button {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .filter-button span {
+    padding: 2px 6px;
+    background-color: var(--light-grey);
+    color: var(--black);
+    font-size: .8rem;
+    border-radius: var(--radius-md);
+  }
 
-    & button {
-        display: flex;
-        align-items: center;
-        gap: var(--spacing-sm);
-    
-        & span {
-            padding: 2px 6px;
-            background-color: var(--white);
-            color: var(--black);
-            font-size: .8rem;
-            border-radius: var(--radius-md);
-        }
-    }
-}
-
+  .filter-button.active {
+    background-color: var(--orange);
+    color: var(--white);
+    box-shadow: var(--shadow-std);
+  }
+  
+  .filter-button.active span {
+    background-color: var(--white);
+    color: var(--black);
+  }
