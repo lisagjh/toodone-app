@@ -1,0 +1,65 @@
+.new-quest-bar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    width: 100%;
+    max-width: 550px;
+    padding: 2rem var(--spacing-sm) 1.5rem;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(0deg, var(--white) 55%, var(--white-transparent) 100%);
+}
+
+.new-quest-bar-row {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    width: 100%;
+}
+
+.new-quest-bar label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 7.5rem;
+    flex: 1;
+}
+
+.title-field {
+    flex: 1;
+}
+
+.field-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--grey);
+}
+
+.new-quest-bar input,
+.new-quest-bar select {
+    width: 100%;
+    min-height: 3rem;
+    border: var(--border-std);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-sm);
+    background: var(--pure-white);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--black);
+}
+
+.new-quest-bar input:focus,
+.new-quest-bar select:focus {
+    outline: 4px solid var(--orange);
+    outline-offset: 2px;
+}
+
+.new-quest-bar button {
+    flex-shrink: 0;
+    min-height: 3rem;
+}
